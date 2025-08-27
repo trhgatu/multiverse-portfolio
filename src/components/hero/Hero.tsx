@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
-import FallingLeaves from "../layouts/FallingLeaves";
+import BackgroundScene from "../scenes/BackgroundScene";
 
 
 gsap.registerPlugin(useGSAP);
@@ -38,10 +38,20 @@ const Hero = () => {
         Ab<b>o</b>ut Me
       </p>
       <div ref={sectionRef} className="h-dvh overflow-hidden">
-        <FallingLeaves />
+        <BackgroundScene />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="fixed inset-0 w-full h-full object-cover -z-1 pointer-events-none mix-blend-screen"
+          style={{ filter: 'hue-rotate(20deg) saturate(2)' }}
+        >
+          <source src="/assets/blackhole.webm" type="video/webm" />
+        </video>
         <div className="grid grid-cols-1 md:grid-cols-2 h-full">
           <div className="flex flex-col justify-center items-start px-8 md:px-16 py-12 space-y-6 ">
-            <div className="absolute bg-transparent z-40 top-1/2 left-12 -translate-y-1/2 w-1/2 pointer-events-none mix-blend-difference">
+            <div className="absolute z-40 top-1/2 left-12 -translate-y-1/2 w-1/2 pointer-events-none">
               <h1 className="text-[4vw] text-white font-extrabold leading-tight">
                 The Forgotten Knight
               </h1>

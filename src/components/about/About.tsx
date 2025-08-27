@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
+import BlackHole from "../layouts/BlackHole";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger)
@@ -44,14 +45,9 @@ const About = () => {
 
       <div className="h-dvh w-screen" id="clip">
         <div className="relative mask-clip-path mx-auto w-[400px] h-[400px] rounded-[40px]">
-          <img src="https://placehold.co/400"
-            alt="About Background"
-            className="absolute left-0 top-0 size-full object-cover"
-          />
+          <BlackHole />
         </div>
       </div>
-
-
     </section>
   );
 }
