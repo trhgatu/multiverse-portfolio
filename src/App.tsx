@@ -6,9 +6,6 @@ import About from "./components/about/About"
 function App() {
   return (
     <main className=" min-h-screen w-screen overflow-hidden">
-      {/* <BackgroundScene/> */}
-
-      {/* <Navbar /> */}
       <Hero/>
       <About/>
       <Footer/>
