@@ -44,7 +44,7 @@ const HeroScene = () => {
         far={10}
       />
 
-      <OrbitControls />
+      <OrbitControls enablePan={false} enableZoom={false} enableRotate={false} />
     </Canvas>
   );
 };
