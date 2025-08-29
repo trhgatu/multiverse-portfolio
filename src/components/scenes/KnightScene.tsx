@@ -11,7 +11,7 @@ const KnightScene = () => {
       <Canvas
         shadows
         camera={{
-          position: [0, 5, 7],
+          position: [0, 3.8, 7],
           fov: 35,
         }}
         gl={{ antialias: true }}
